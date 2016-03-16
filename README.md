@@ -6,7 +6,6 @@ First of all, you need
     NodeJS & NPM
     Git 
     Make 
-    OpenSSL 
 
 
 For installation refer to
