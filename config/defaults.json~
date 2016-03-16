@@ -103,7 +103,7 @@
   "glossary": false,
   "homeLink": "/",
   "headerBackgroundColor": "#4E8EF7",
-  "headerFontColor": "#FFFFFF",
+  "headerFontColor": "",
   "headerContrast": false,
   "googleAPIKey": "",
   "visibility": "visible",
