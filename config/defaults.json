@@ -45,6 +45,7 @@
     }
   },
   "client": [
+    "banner",
     "protocol",
     "host",
     "publicPort",
@@ -132,5 +133,6 @@
     "uk",
     "zh_TW"
   ],
-  "enforceLocale": false
+  "enforceLocale": false,
+  "banner":"/boot/hands.jpg"
 }
