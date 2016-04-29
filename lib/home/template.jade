@@ -1,76 +1,84 @@
 #home-content
     #home-body
-        .row
-          .col-lg-12
-            #banner(style='background-image: url(/boot/hands.jpg); background-size: auto 100%;')
-        .container.marketing
-          // Three columns of text below the carousel
-          .row
-            .miniature.col-lg-4
-              img.img-circle(src='/boot/speech.jpg', alt='Speech', style='width: 140px; height: 140px;')
-              h2 Argumentation
-              p
-                | Encourager une dynamique de production collaborative d’argumentation et de connaissance par des groupes de citoyen(ne)s centrée sur la réflexion à propos des conditions de possibilités de la démocratie (par exemple, indépendance de l’information ou de la justice, capacité empathie, problèmes oligarchiques …).
-              p
-                //a.btn.btn-default(href='#', role='button') View details &raquo;
-            // /.col-lg-4
-            .miniature.col-lg-4
-              img.img-circle(src='/boot/thinking.jpg', alt='Thinking', style='width: 140px; height: 140px;')
-              h2 Réflexion
-              p
-                | Pour être une réflexion collaborative véritablement commune, le contenu doit faire l’objet d’une validation collective quant à la qualité de la forme de son argumentation. Il ne s’agit pas de parvenir à un consensus sur les points de départ des argumentations, mais sur la validité formelle du raisonnement.
-              p
-                //a.btn.btn-default(href='#', role='button') View details &raquo;
-            // /.col-lg-4
-            .miniature.col-lg-4
-              img.img-circle(src='/boot/meeting1.jpg', alt='Meeting', style='width: 140px; height: 140px;')
-              h2 Citoyenne
-              p
-                | Encourager des rassemblements à petite échelle (quelques dizaines de personnes maximum) mais qui se produisent à de nombreux endroits différents et avec de nombreux groupes différents afin de conduire des débats avec l’objectif de produire une argumentation (texte, vidéo, audio).
-              p
-                //a.btn.btn-default(href='#', role='button') View details &raquo;
-            // /.col-lg-4
-          // /.row
-          // START THE FEATURETTES
-          hr.featurette-divider
-          .row.featurette
-            .col-md-7
-              h2.featurette-heading
-                | Comment utiliser la plateforme ? 
-                span.text-muted Guide video.
-              p.lead
-                | Guide d'utilisation de la plateforme ARC sous forme de video vous expliquant comment participer en rédigeant une argumentation ou en lisant des articles et en votant pour ou contre leur validation.
-            .col-md-5
-              #video
-                | Emplacement de la video
-        //
-          hr.featurette-divider
-          .row.featurette
-            .col-md-5
-              img.featurette-image.img-responsive(data-src='holder.js/500x500/auto', alt='Generic placeholder image')
-            .col-md-7
-              h2.featurette-heading
-                | Oh yeah, it&apos;s that good. 
-                span.text-muted See for yourself.
-              p.lead
-                | Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
-          hr.featurette-divider
-          .row.featurette
-            .col-md-7
-              h2.featurette-heading
-                | And lastly, this one. 
-                span.text-muted Checkmate.
-              p.lead
-                | Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
-            .col-md-5
-              img.featurette-image.img-responsive(data-src='holder.js/500x500/auto', alt='Generic placeholder image')
-          hr.featurette-divider
-          footer
-            p.pull-right
-              a(href='#') Back to top
-            p
-              | &copy; 2014 Company, Inc. &middot; 
-              a(href='#') Privacy
-              |  &middot; 
-              a(href='#') Terms
-        
+        #wrapper
+            #sidebar-wrapper
+              ul.sidebar-nav
+                li.sidebar-brand
+                  a
+                    |Link 1
+                  a
+                    |Link 2
+                  a
+                    |Link 3
+                   a
+                    |Link 4                   
+            #sidebar-wrapper-right
+                .marketing
+                  // Three columns of text below the carousel
+                  .row
+                    .miniature.col-lg-12
+                      h2(style='text-align: center;') ARC ?
+                      p(style='text-align: justify;')
+                        |ARC est une plate‐forme visant à collecter des productions d'argumentation et de connaissances sur des sujets variés en permettant leur consultation et leur mise en interaction. ARC s'articule autour de 3 "concepts" centraux: Argumentation, Réflexion et Citoyenneté.
+                    .miniature.col-lg-12
+                      img.img-circle(src='/boot/speech.jpg', alt='Speech', style='width: 140px; height: 140px;')
+                      h3 Argumentation
+                      p
+                        | Encourager une dynamique de production collaborative d’argumentation et de connaissance par des groupes de citoyen(ne)s centrée sur la réflexion à propos des conditions de possibilités de la démocratie (par exemple, indépendance de l’information ou de la justice, capacité empathie, problèmes oligarchiques …).
+                      p
+                        //a.btn.btn-default(href='#', role='button') View details &raquo;
+                    // /.col-lg-4
+                    .miniature.col-lg-12
+                      img.img-circle(src='/boot/thinking.jpg', alt='Thinking', style='width: 140px; height: 140px;')
+                      h3 Réflexion
+                      p
+                        | Pour être une réflexion collaborative véritablement commune, le contenu doit faire l’objet d’une validation collective quant à la qualité de la forme de son argumentation. Il ne s’agit pas de parvenir à un consensus sur les points de départ des argumentations, mais sur la validité formelle du raisonnement.
+                      p
+                        //a.btn.btn-default(href='#', role='button') View details &raquo;
+                    // /.col-lg-4
+                    .miniature.col-lg-12(style='margin-bottom:80px;')
+                      img.img-circle(src='/boot/meeting1.jpg', alt='Meeting', style='width: 140px; height: 140px;')
+                      h3 Citoyenneté
+                      p
+                        | Encourager des rassemblements à petite échelle (quelques dizaines de personnes maximum) mais qui se produisent à de nombreux endroits différents et avec de nombreux groupes différents afin de conduire des débats avec l’objectif de produire une argumentation (texte, vidéo, audio).
+
+            #page-content-wrapper
+              .container
+                .row
+                  .col-lg-12
+                    #banner(style='background-image: url(/boot/hands.jpg); background-size: auto 100%;')
+                hr.featurette-divider
+                .row.featurette
+                  .col-lg-12.col-md-7
+                    h2.featurette-heading
+                      | Comment utiliser la plateforme ? 
+                      span.text-muted Guide video.
+                    p.lead
+                      | Guide d'utilisation de la plateforme ARC sous forme de video vous expliquant comment participer en rédigeant une argumentation ou en lisant des articles et en votant pour ou contre leur validation.
+                  .col-lg-12.col-md-5
+                    #video
+                      | Emplacement de la video
+                hr.featurette-divider
+                .row.featurette.hidden-lg
+                  .miniature.col-md-12
+                    h2.featurette-heading ARC ?
+                    p(style='text-align: justify;')
+                      |ARC est une plate‐forme visant à collecter des productions d'argumentation et de connaissances sur des sujets variés en permettant leur consultation et leur mise en interaction. ARC s'articule autour de 3 "concepts" centraux: Argumentation, Réflexion et Citoyenneté.
+                  .miniature.col-md-4
+                    img.img-circle(src='/boot/speech.jpg', alt='Speech', style='width: 140px; height: 140px;')
+                    h2 Argumentation
+                    p
+                      | Encourager une dynamique de production collaborative d’argumentation et de connaissance par des groupes de citoyen(ne)s centrée sur la réflexion à propos des conditions de possibilités de la démocratie (par exemple, indépendance de l’information ou de la justice, capacité empathie, problèmes oligarchiques …).
+                    p
+                  .miniature.col-md-4
+                    img.img-circle(src='/boot/thinking.jpg', alt='Thinking', style='width: 140px; height: 140px;')
+                    h2 Réflexion
+                    p
+                      | Pour être une réflexion collaborative véritablement commune, le contenu doit faire l’objet d’une validation collective quant à la qualité de la forme de son argumentation. Il ne s’agit pas de parvenir à un consensus sur les points de départ des argumentations, mais sur la validité formelle du raisonnement.
+                    p
+                  .miniature.col-md-4
+                    img.img-circle(src='/boot/meeting1.jpg', alt='Meeting', style='width: 140px; height: 140px;')
+                    h2 Citoyenne
+                    p
+                      | Encourager des rassemblements à petite échelle (quelques dizaines de personnes maximum) mais qui se produisent à de nombreux endroits différents et avec de nombreux groupes différents afin de conduire des débats avec l’objectif de produire une argumentation (texte, vidéo, audio).
+                    p
