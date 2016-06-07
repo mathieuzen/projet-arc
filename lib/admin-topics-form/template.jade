@@ -18,6 +18,9 @@
         input(type='hidden', name='_topic_id_', value=topic.id)
         ul.form-messages
         .form-group
+          label= 'Date'
+          input.form-control(type='date', id="date", name='date', tabindex=1, placeholder='', value=topic.date)
+        .form-group
           label= t('admin-topics-form.label.mediaTitle')
           input.form-control(type='text', id="mediaTitle", name='mediaTitle', tabindex=1, placeholder=t('admin-topics-form.label.mediaTitle'), value=topic.mediaTitle, validate='required')
         .form-group
@@ -25,28 +28,28 @@
           select.form-control(name='tag', tabindex=2, validate='required')
             - each tag in tags
               option(selected= topic.tag ? tag.hash === topic.tag.hash : false, value=tag.hash)= tag.name
-        .form-group
+        .form-group.hide
           label= t('admin-topics-form.label.topicId')
           input.form-control(type='text', id="topicId", name='topicId', tabindex=3, placeholder=t('admin-topics-form.label.topicId'), value=topic.topicId)
         .form-group
           label= t('admin-topics-form.label.author')
           input.form-control(type='text', id="topicAuthor", name='topicAuthor', tabindex=4, placeholder='John Doe', value=topic.author, validate='author')
-        .form-group
+        .form-group.hide
           label= t('admin-topics-form.label.author') + ' URL'
           input.form-control(type='text', id="authorUrl", name='authorUrl', tabindex=5, placeholder='http://en.wikipedia.org/wiki/John_Doe', value=topic.authorUrl, validate='url')
-        .form-group
+        .form-group.hide
           label= t('admin-topics-form.label.votable')
           .votable-toggle
         .form-group.hide
           label= t('admin-topics-form.label.clause-truncation-text')
           input.form-control(type='text', name='bodyTruncationText', placeholder=t('common.read-more'), value=topic.bodyTruncationText)
-        .form-group
+        .form-group.hide
           label= t('admin-topics-form.label.source')
           input.form-control(type='url', name='source', tabindex=6, placeholder=t('admin-topics-form.placeholder.source'), value=topic.source, validate='url')
         .form-group
           label= t('admin-topics-form.label.summary')
           textarea.form-control(name='body', tabindex=7)= topic.body
-        .form-group.closingAt
+        .form-group.closingAt.hide
           label= t('admin-topics-form.label.closingAt')
           - var closingAt = ''
           - var closingAtTime = ''

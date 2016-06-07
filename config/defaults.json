@@ -10,7 +10,7 @@
   "signinUrl": "",
   "signupUrl": "",
   "settingsUrl": "",
-  "staff": ["jperezmedina@gmail.com"],
+  "staff": ["mathieu.zen@uclouvain.be"],
   "allowEmailAliases": true,
   "facebookSignin": false,
   "publicEmails": false,
