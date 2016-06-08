@@ -28,11 +28,8 @@
     .meta-information
       p
         i.icon-time
-        - if (proposal.closingAt)
-          span.time-ago-label= (closed ? t('common.closed') : t('common.close')) + " "
-          span.meta-item.meta-timeago.ago(data-time=proposal.closingAt.toString())
-        - else
-          span.meta-item.meta-timeago= t('proposal-article.unknown-closing-date')
+          span.time-ago-label= "Dernière modification : "
+          span.meta-item.meta-timeago.ago(data-time=proposal.updatedAt.toString())
 
     h1=proposal.mediaTitle
     - if (proposal.author)
@@ -73,6 +70,6 @@
 
     //- Article share links
     - var text = config.tweetText || proposal.mediaTitle
-    .share-links
+    .share-links.hide
       a(target="_blank", href="http://www.facebook.com/sharer.php?u=#{baseUrl}/topic/#{proposal.id}").flaticon.social.facebook
       a(target="_blank", href="http://twitter.com/share?text=#{text}&url=#{baseUrl}/topic/#{proposal.id}").flaticon.social.twitter

@@ -1,5 +1,5 @@
 {
-  "locale": "en",
+  "locale": "fr",
   "protocol": "http",
   "host": "localhost",
   "publicPort": 8888,
@@ -10,7 +10,7 @@
   "signinUrl": "",
   "signupUrl": "",
   "settingsUrl": "",
-  "staff": ["mathieu.zen@uclouvain.be"],
+  "staff": ["mathieu.zen@uclouvain.be", "etienne.freiss@uclouvain.be", "jperezmedina@gmail.com"],
   "allowEmailAliases": true,
   "facebookSignin": false,
   "publicEmails": false,
@@ -133,6 +133,6 @@
     "uk",
     "zh_TW"
   ],
-  "enforceLocale": false,
+  "enforceLocale": true,
   "banner":"/boot/hands.jpg"
 }
