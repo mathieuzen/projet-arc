@@ -2,7 +2,7 @@
 
 .comments
   - if (logged)
-    .inner-container.my-comments
+    .inner-container.my-comments.hide
       h4=t('comments.your.arguments')
       ul.media-list.my-comments-list
       form.comment-form(method='post', action='/api/topic/#{topic.id}/comment', autovalidate='autovalidate', autosubmit='autosubmit')

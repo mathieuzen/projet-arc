@@ -3,11 +3,11 @@
 #topics-wrapper
   .topics-admin
     .row.well.well-lg
-      .col-md-2.col-xs-12
+      .col-md-3.col-xs-12
         a.btn.btn-success.btn-block.new(href='#{prepend}/admin/topics/create')
           span.glyphicon.glyphicon-plus
           = ' ' + t('admin-topics.list.add-topic')
-      .col-md-7.col-xs-12.text-center
+      .col-md-6.col-xs-12.text-center
         .input-group.input-group-md
           span.input-group-addon
             i.glyphicon.glyphicon-search
@@ -31,13 +31,10 @@
               span.glyphicon.glyphicon-user
               span.text=topic.author
             span.glyphicon.glyphicon-time
-            - if (topic.closingAt)
-              - var date = new Date(topic.closingAt)
-              - var relative = moment(date).fromNow()
-              - var when = (date < Date.now()) ? 'past' : 'future'
-              span.text=t('admin-topics.list.close.' + when) + ' ' + relative
-            - else
-              span.text=t('article.unknown-closing-date')
+            - if (topic.updatedAt)
+              - var options = {weekday: "long", year: "numeric", month: "long", day: "numeric"}
+              - var when = new Date(topic.updatedAt)
+              span.text='' + when.toLocaleDateString('fr-FR',options)
             span.glyphicon.glyphicon-tag
             span.text.topic-id=topic.tag.name
             span.topic-date.hide=topic.createdAt

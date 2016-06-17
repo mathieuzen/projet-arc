@@ -13,7 +13,7 @@
 			.heading
 				.circle
 					i.icon-user
-				h1= t(form.title)
+				h1='Nouvelle réflexion'
 			form.form-horizontal(action=form.action, method="post", role="form", autocomplete="off", novalidate, autovalidate='autovalidate', autosubmit='autosubmit')
 				input(type='hidden', name='_topic_id_', value=topic.id)
 				ul.form-messages
