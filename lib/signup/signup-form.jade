@@ -12,11 +12,8 @@
         label= t('signup.email')
         input.form-control(type='email', name='email', tabindex=1, placeholder=t('forgot.mail.example'), validate='required email')
       .form-group
-        label #{t('signup.your-firstname')}
-        input.form-control(type='text', id='firstName', name='firstName', tabindex=2, placeholder=t('signup.firstname'), validate='required firstname')
-      .form-group
-        label #{t('signup.your-lastname')}
-        input.form-control(type='text', id='lastName', name='lastName', tabindex=3, placeholder=t('signup.lastname'), validate='required lastname')
+        label #{'Pseudo'}
+        input.form-control(type='text', id='pseudo', name='pseudo', tabindex=3, placeholder='Pseudo', validate='required pseudo')
       .form-group
         label= t('password')
         input.form-control(type='password', name='password', tabindex=4, placeholder=t('password'), validate='required min-length:6')

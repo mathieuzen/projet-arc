@@ -36,29 +36,29 @@
                       p
                         //a.btn.btn-default(href='#', role='button') View details &raquo;
                     // /.col-lg-4
-                    .miniature.col-lg-12(style='margin-bottom:80px;')
+                    .miniature.col-lg-12
                       img.img-circle(src='/boot/meeting1.jpg', alt='Meeting', style='width: 140px; height: 140px;')
                       h3 Citoyenneté
                       p
                         | Encourager des rassemblements à petite échelle (quelques dizaines de personnes maximum) mais qui se produisent à de nombreux endroits différents et avec de nombreux groupes différents afin de conduire des débats avec l’objectif de produire une argumentation (texte, vidéo, audio).
-
+                      p
+                    .miniature.col-lg-12(style='margin-bottom:80px;')
+                      h3
+                        | Comment utiliser la plateforme ?
+                      #video
+                        | Emplacement de la video                    
             #page-content-wrapper
               .container
                 .row
                   .col-lg-12
                     #banner(style='background-image: url(/boot/hands.jpg); background-size: auto 100%;')
-                hr.featurette-divider
-                .row.featurette
-                  .col-lg-12.col-md-7
-                    h2.featurette-heading
-                      | Comment utiliser la plateforme ? 
-                      span.text-muted Guide video.
-                    p.lead
-                      | Guide d'utilisation de la plateforme ARC sous forme de video vous expliquant comment participer en rédigeant une argumentation ou en lisant des articles et en votant pour ou contre leur validation.
-                  .col-lg-12.col-md-5
-                    #video
-                      | Emplacement de la video
-                hr.featurette-divider
+                .row
+                  h2.featurette-heading(style='padding-left: 12px; margin-bottom: 0;') Dernières contributions
+                  each val in [1,2,3,4]
+                    .col-lg-12(style='border-bottom: 1px solid lightgrey;')
+                      h3 Titre de la contribution
+                      p.lead 1er juillet 2017
+                      p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 .row.featurette.hidden-lg
                   .miniature.col-md-12
                     h2.featurette-heading ARC ?
@@ -82,3 +82,14 @@
                     p
                       | Encourager des rassemblements à petite échelle (quelques dizaines de personnes maximum) mais qui se produisent à de nombreux endroits différents et avec de nombreux groupes différents afin de conduire des débats avec l’objectif de produire une argumentation (texte, vidéo, audio).
                     p
+                .row.hidden-lg
+                  .col-lg-12.col-md-7
+                    h2.featurette-heading
+                      | Comment utiliser la plateforme ?
+                      span.text-muted  Guide video.
+                    p.lead
+                      | Guide d'utilisation de la plateforme ARC sous forme de video vous expliquant comment participer en rédigeant une argumentation ou en lisant des articles et en votant pour ou contre leur validation.
+                  .col-lg-12.col-md-5
+                    #video
+                      | Emplacement de la video
+                      
