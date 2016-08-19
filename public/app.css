@@ -2066,7 +2066,7 @@ label {
   padding-left: 20px;
   padding-right: 20px;
   margin: auto;
-  max-width: 580px;
+  max-width: 1000px;
 }
 
 .small-container {
@@ -3485,7 +3485,7 @@ form.reply-edit-form .btn-cancel {
 .comments .inner-container {
   position: relative;
   margin: auto;
-  max-width: 580px;
+  max-width: 1000px;
   min-height: 5em;
 }
 
@@ -7382,6 +7382,31 @@ header.app-header .user-nav .login:hover {
   }
 }
 
+.chip {
+  display: inline-block;
+  height: 32px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(0,0,0,0.8);
+  line-height: 32px;
+  padding: 0 12px;
+  border-radius: 16px;
+  background-color: #e4e4e4;
+  margin-right: 5px;
+}
+
+.menuIcon {
+  margin-right: 15px;
+}
+
+.author-thumb {
+  width: 24px;
+  height: 24px;
+  float: left;
+  margin-right: 9px;
+  border-radius: 100%;
+}
+
 .container.marketing {
   position: relative;
   top: 60px;
@@ -7411,6 +7436,8 @@ header.app-header .user-nav .login:hover {
 
 p {
   text-align: justify;
+  font-size: 16px;
+  font-family: Calibri;
 }
 
 #video {

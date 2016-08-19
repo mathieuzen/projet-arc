@@ -3,15 +3,22 @@
         #wrapper
             #sidebar-wrapper
               ul.sidebar-nav
-                li.sidebar-brand
+                li.sidebar-brand(style="margin-top: 20px;")
+                  a(href="/admin/topics/create")
+                    span.glyphicon.glyphicon-plus.menuIcon
+                    |Contribuer
                   a
-                    |Link 1
+                    span.glyphicon.glyphicon-search.menuIcon
+                    |Rechercher
                   a
-                    |Link 2
+                    span.glyphicon.glyphicon-calendar.menuIcon
+                    |Agenda
                   a
-                    |Link 3
+                    span.glyphicon.glyphicon-question-sign.menuIcon
+                    |F.A.Q.
                    a
-                    |Link 4                   
+                    span.glyphicon.glyphicon-user.menuIcon
+                    |Contact                 
             #sidebar-wrapper-right
                 .marketing
                   // Three columns of text below the carousel
@@ -53,16 +60,27 @@
                   .col-lg-12
                     #banner(style='background-image: url(/boot/hands.jpg); background-size: auto 100%;')
                 .row
-                  h2.featurette-heading(style='padding-left: 12px; margin-bottom: 0;') Dernières contributions
-                  each val in [1,2,3,4]
-                    .col-lg-12(style='border-bottom: 1px solid lightgrey;')
-                      h3 Titre de la contribution
-                      p.lead 1er juillet 2017
-                      p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  .col-lg-12
+                    h2.featurette-heading(style='display: block; border: 1px solid black; padding: 15px;  margin-top: 10px; margin-bottom: 0;') Dernières contributions
+                    each topic in topics
+                      .col-lg-12(style='border-bottom: 1px solid lightgrey;')
+                        - var options = {weekday: "long", year: "numeric", month: "long", day: "numeric"};
+                        h2(style="margin-bottom:8px; margin-top: 12px; color: #4a4a4a;")= topic.mediaTitle
+                        img.author-thumb(src="https://secure.gravatar.com/avatar/7191ae26dfe75d85eeedcc33464113de?d=mm")
+                        a= topic.author
+                        span(style="border-left: #d5dbde 1px solid; margin-left: 12px; padding-left: 12px;")= new Date(topic.updatedAt).toLocaleDateString("fr-FR",options)
+                        p.abstract(style="font-family: Calibri; font-size: 16px; background-color: transparent;margin-top:8px;") #{topic.content}
+                          a.read-more(href=topic.url style="display: inline; margin-left: 5px; font-size: 13px;") >>
+                .row
+                  .col-lg-12
+                    h2.featurette-heading(style='display: block; border: 1px solid black; padding: 15px;  margin-top: 10px; margin-bottom: 0;') Thématiques
+                    .col-lg-12(style="margin-top: 10px;")
+                      each tag in tags
+                        span.chip= tag.name
                 .row.featurette.hidden-lg
                   .miniature.col-md-12
                     h2.featurette-heading ARC ?
-                    p(style='text-align: justify;')
+                    p(style='font-size: 16px; text-align: justify;')
                       |ARC est une plate‐forme visant à collecter des productions d'argumentation et de connaissances sur des sujets variés en permettant leur consultation et leur mise en interaction. ARC s'articule autour de 3 "concepts" centraux: Argumentation, Réflexion et Citoyenneté.
                   .miniature.col-md-4
                     img.img-circle(src='/boot/speech.jpg', alt='Speech', style='width: 140px; height: 140px;')
