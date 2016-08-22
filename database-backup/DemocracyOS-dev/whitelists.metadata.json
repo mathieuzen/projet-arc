@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"DemocracyOS-dev.whitelists"},{"v":1,"key":{"value":1},"name":"value_1","ns":"DemocracyOS-dev.whitelists","background":true,"safe":null}]}
