@@ -7,7 +7,6 @@ First of all, you need
     Git 
     Make 
 
-
 For installation refer to
 http://docs.democracyos.org/install.html
 
