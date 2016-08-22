@@ -11,7 +11,6 @@
 .idea/*
 .npmrc
 .tmp
-config*.json
 lib-cov
 logs
 mongroup.conf
