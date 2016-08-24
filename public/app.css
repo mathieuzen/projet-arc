@@ -8063,6 +8063,10 @@ article.proposal .share-links a.twitter:hover {
   position: relative;
 }
 
+.proposal-options .vote-options .direct-vote {
+  text-align: center;
+}
+
 .proposal-options .vote-options .overlay-vote {
   background-color: rgba(249,249,249,0.9);
   font-weight: bold;
@@ -8081,10 +8085,10 @@ article.proposal .share-links a.twitter:hover {
 
 .proposal-options .vote-options .vote-option {
   display: inline-block;
-  width: 30%;
+  width: 49%;
   font-size: 14px;
   text-align: center;
-  margin-right: 5%;
+  margin-right: 2%;
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
@@ -8147,6 +8151,11 @@ article.proposal .share-links a.twitter:hover {
 
 .proposal-options .vote-box h5,
 .proposal-options .results-box h5 {
+  padding: 10px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  background-color: #ecf3ff;
+  text-align: center;
   text-transform: uppercase;
   margin-top: 0;
 }

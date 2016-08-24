@@ -31,9 +31,6 @@
           a.vote-option.vote-yes(href="#", data-proposal=proposal.id)
             i.flaticon.solid.thumbs-up-1
             span= t('proposal-options.yea')
-          a.vote-option.vote-abstain(href="#", data-proposal=proposal.id)
-            i.flaticon.solid.pause
-            span= t('proposal-options.abstain')
           a.vote-option.vote-no(href="#", data-proposal=proposal.id)
             i.flaticon.solid.thumbs-up-1
             span= t('proposal-options.nay')
@@ -44,6 +41,11 @@
             = ' ' + t('common.or') + ' '
             a(href="/signup?reference=" + reference)= t('signin.signup')
             = '.'
+
+      div#vote-argument.hide
+        div.alert.alert-info Expliquez les raisons de votre vote:
+        textarea(style="width: 100%; height: 250px;")
+        div.submit.btn.btn-default(style="width: 100%;") Soumettre
 
       .votes-cast
         em.text-muted= t('proposal-options.votes-cast', { num: census.length || "0" })
