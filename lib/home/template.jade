@@ -24,36 +24,31 @@
                   // Three columns of text below the carousel
                   .row
                     .miniature.col-lg-12
-                      h2(style='text-align: center;')=t('home.arc.definition.title')
-                      p(style='text-align: justify;')
-                        span=t('home.arc.definition.content')
-                    .miniature.col-lg-12
-                      img.img-circle(src='/boot/speech.jpg', alt='Speech', style='width: 140px; height: 140px;')
-                      h3=t('home.arc.argumentation.title')
-                      p
-                        span=t('home.arc.argumentation.content')
-                      p
-                        //a.btn.btn-default(href='#', role='button') View details &raquo;
-                    // /.col-lg-4
-                    .miniature.col-lg-12
-                      img.img-circle(src='/boot/thinking.jpg', alt='Thinking', style='width: 140px; height: 140px;')
-                      h3=t('home.arc.reflexion.title')
-                      p
-                        span=t('home.arc.reflexion.content')
-                      p
-                        //a.btn.btn-default(href='#', role='button') View details &raquo;
-                    // /.col-lg-4
-                    .miniature.col-lg-12
-                      img.img-circle(src='/boot/meeting1.jpg', alt='Meeting', style='width: 140px; height: 140px;')
-                      h3=t('home.arc.citoyennete.title')
-                      p
-                        span=t('home.arc.citoyennete.content')
-                      p
-                    .miniature.col-lg-12(style='margin-bottom:80px;')
-                      h3
-                        | Comment utiliser la plateforme ?
-                      #video
-                        | Emplacement de la video                    
+                      h2.smallTitle=t('home.arc.definition.title')
+                      .col-lg-12
+                        p(style='text-align: justify;')=t('home.arc.definition.content')
+                      .col-lg-12
+                        img.img-circle(src='/boot/speech.jpg', alt='Speech', style='width: 140px; height: 140px;')
+                        h3=t('home.arc.argumentation.title')
+                        p
+                          span=t('home.arc.argumentation.content')
+                      .col-lg-12
+                        img.img-circle(src='/boot/thinking.jpg', alt='Thinking', style='width: 140px; height: 140px;')
+                        h3=t('home.arc.reflexion.title')
+                        p
+                          span=t('home.arc.reflexion.content')
+                        p
+                      .col-lg-12
+                        img.img-circle(src='/boot/meeting1.jpg', alt='Meeting', style='width: 140px; height: 140px;')
+                        h3=t('home.arc.citoyennete.title')
+                        p
+                          span=t('home.arc.citoyennete.content')
+                        p
+                      .col-lg-12(style='margin-bottom:80px;')
+                        h3
+                          | Comment utiliser la plateforme ?
+                        #video
+                          | Emplacement de la video                    
             #page-content-wrapper
               .container
                 .row
@@ -61,11 +56,11 @@
                     #banner(style='background-image: url(/boot/hands.jpg); background-size: auto 100%;')
                 .row
                   .col-lg-12
-                    h2.featurette-heading(style='display: block; border: 1px solid black; padding: 15px;  margin-top: 10px; margin-bottom: 0;') Dernières contributions
+                    h2.featurette-heading(style='display: block; border-bottom: 0.5px dashed lightgray; padding: 15px;  margin-top: 10px; margin-bottom: 0; font-size:1.25em;') Dernières contributions
                     each topic in topics
                       .col-lg-12(style='border-bottom: 1px solid lightgrey;')
                         - var options = {weekday: "long", year: "numeric", month: "long", day: "numeric"};
-                        h2(style="margin-bottom:8px; margin-top: 12px; color: #4a4a4a;")= topic.mediaTitle
+                        h2(style="margin-bottom:8px; margin-top: 12px; color: #989898;")= topic.mediaTitle
                         img.author-thumb(src="https://secure.gravatar.com/avatar/7191ae26dfe75d85eeedcc33464113de?d=mm")
                         a= topic.author
                         span(style="border-left: #d5dbde 1px solid; margin-left: 12px; padding-left: 12px;")= new Date(topic.updatedAt).toLocaleDateString("fr-FR",options)
@@ -73,41 +68,43 @@
                           a.read-more(href=topic.url style="display: inline; margin-left: 5px; font-size: 13px;") >>
                 .row
                   .col-lg-12
-                    h2.featurette-heading(style='display: block; border: 1px solid black; padding: 15px;  margin-top: 10px; margin-bottom: 0;') Thématiques
-                    .col-lg-12(style="margin-top: 10px;")
+                    h2.featurette-heading(style='display: block; border-bottom: 0.5px dashed lightgray; padding: 15px;  margin-top: 10px; margin-bottom: 0; font-size:1.25em;') Thématiques
+                    .col-lg-12(style="margin-top: 10px;  padding-bottom: 10px;  border-bottom: 1px solid lightgrey;")
                       each tag in tags
                         span.chip= tag.name
                 .row.featurette.hidden-lg
                   .miniature.col-md-12
-                    h2.featurette-heading ARC ?
-                    p(style='font-size: 16px; text-align: justify;')
-                      |ARC est une plate‐forme visant à collecter des productions d'argumentation et de connaissances sur des sujets variés en permettant leur consultation et leur mise en interaction. ARC s'articule autour de 3 "concepts" centraux: Argumentation, Réflexion et Citoyenneté.
-                  .miniature.col-md-4
-                    img.img-circle(src='/boot/speech.jpg', alt='Speech', style='width: 140px; height: 140px;')
-                    h2 Argumentation
-                    p
-                      | Encourager une dynamique de production collaborative d’argumentation et de connaissance par des groupes de citoyen(ne)s centrée sur la réflexion à propos des conditions de possibilités de la démocratie (par exemple, indépendance de l’information ou de la justice, capacité empathie, problèmes oligarchiques …).
-                    p
-                  .miniature.col-md-4
-                    img.img-circle(src='/boot/thinking.jpg', alt='Thinking', style='width: 140px; height: 140px;')
-                    h2 Réflexion
-                    p
-                      | Pour être une réflexion collaborative véritablement commune, le contenu doit faire l’objet d’une validation collective quant à la qualité de la forme de son argumentation. Il ne s’agit pas de parvenir à un consensus sur les points de départ des argumentations, mais sur la validité formelle du raisonnement.
-                    p
-                  .miniature.col-md-4
-                    img.img-circle(src='/boot/meeting1.jpg', alt='Meeting', style='width: 140px; height: 140px;')
-                    h2 Citoyenne
-                    p
-                      | Encourager des rassemblements à petite échelle (quelques dizaines de personnes maximum) mais qui se produisent à de nombreux endroits différents et avec de nombreux groupes différents afin de conduire des débats avec l’objectif de produire une argumentation (texte, vidéo, audio).
-                    p
-                .row.hidden-lg
-                  .col-lg-12.col-md-7
-                    h2.featurette-heading
-                      | Comment utiliser la plateforme ?
-                      span.text-muted  Guide video.
-                    p.lead
-                      | Guide d'utilisation de la plateforme ARC sous forme de video vous expliquant comment participer en rédigeant une argumentation ou en lisant des articles et en votant pour ou contre leur validation.
-                  .col-lg-12.col-md-5
-                    #video
-                      | Emplacement de la video
-                      
+                    h2.smallTitle=t('home.arc.definition.title')
+                    .col-lg-12
+                      p(style='font-size: 16px; text-align: justify;')
+                        span=t('home.arc.definition.content')
+                    .miniature.col-md-4
+                      img.img-circle(src='/boot/speech.jpg', alt='Speech', style='width: 140px; height: 140px;')
+                      h2=t('home.arc.argumentation.title')
+                      p
+                        span=t('home.arc.argumentation.content')
+                      p
+                    .miniature.col-md-4
+                      img.img-circle(src='/boot/thinking.jpg', alt='Thinking', style='width: 140px; height: 140px;')
+                      h2=t('home.arc.reflexion.title')
+                      p
+                        span=t('home.arc.reflexion.content')
+                      p
+                    .miniature.col-md-4
+                      img.img-circle(src='/boot/meeting1.jpg', alt='Meeting', style='width: 140px; height: 140px;')
+                      h2=t('home.arc.citoyennete.title')
+                      p
+                        span=t('home.arc.citoyennete.content')
+                      p
+                    .row.hidden-lg
+                      .col-lg-12
+                        .col-lg-12.col-md-7
+                          h2.featurette-heading
+                            | Comment utiliser la plateforme ?
+                            span.text-muted  Guide video.
+                          p.lead
+                            | Guide d'utilisation de la plateforme ARC sous forme de video vous expliquant comment participer en rédigeant une argumentation ou en lisant des articles et en votant pour ou contre leur validation.
+                        .col-lg-12.col-md-5
+                          #video
+                            | Emplacement de la video
+                            
