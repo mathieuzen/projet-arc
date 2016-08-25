@@ -24,30 +24,30 @@
                   // Three columns of text below the carousel
                   .row
                     .miniature.col-lg-12
-                      h2(style='text-align: center;') ARC ?
+                      h2(style='text-align: center;')=t('home.arc.definition.title')
                       p(style='text-align: justify;')
-                        |ARC est une plate‐forme visant à collecter des productions d'argumentation et de connaissances sur des sujets variés en permettant leur consultation et leur mise en interaction. ARC s'articule autour de 3 "concepts" centraux: Argumentation, Réflexion et Citoyenneté.
+                        span=t('home.arc.definition.content')
                     .miniature.col-lg-12
                       img.img-circle(src='/boot/speech.jpg', alt='Speech', style='width: 140px; height: 140px;')
-                      h3 Argumentation
+                      h3=t('home.arc.argumentation.title')
                       p
-                        | Encourager une dynamique de production collaborative d’argumentation et de connaissance par des groupes de citoyen(ne)s centrée sur la réflexion à propos des conditions de possibilités de la démocratie (par exemple, indépendance de l’information ou de la justice, capacité empathie, problèmes oligarchiques …).
+                        span=t('home.arc.argumentation.content')
                       p
                         //a.btn.btn-default(href='#', role='button') View details &raquo;
                     // /.col-lg-4
                     .miniature.col-lg-12
                       img.img-circle(src='/boot/thinking.jpg', alt='Thinking', style='width: 140px; height: 140px;')
-                      h3 Réflexion
+                      h3=t('home.arc.reflexion.title')
                       p
-                        | Pour être une réflexion collaborative véritablement commune, le contenu doit faire l’objet d’une validation collective quant à la qualité de la forme de son argumentation. Il ne s’agit pas de parvenir à un consensus sur les points de départ des argumentations, mais sur la validité formelle du raisonnement.
+                        span=t('home.arc.reflexion.content')
                       p
                         //a.btn.btn-default(href='#', role='button') View details &raquo;
                     // /.col-lg-4
                     .miniature.col-lg-12
                       img.img-circle(src='/boot/meeting1.jpg', alt='Meeting', style='width: 140px; height: 140px;')
-                      h3 Citoyenneté
+                      h3=t('home.arc.citoyennete.title')
                       p
-                        | Encourager des rassemblements à petite échelle (quelques dizaines de personnes maximum) mais qui se produisent à de nombreux endroits différents et avec de nombreux groupes différents afin de conduire des débats avec l’objectif de produire une argumentation (texte, vidéo, audio).
+                        span=t('home.arc.citoyennete.content')
                       p
                     .miniature.col-lg-12(style='margin-bottom:80px;')
                       h3
