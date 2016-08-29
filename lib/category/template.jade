@@ -1,0 +1,33 @@
+#home-content
+    #home-body
+        #wrapper
+            #sidebar-wrapper
+              ul.sidebar-nav
+                li.sidebar-brand(style="margin-top: 20px;")
+                  a(href="/admin/topics/create")
+                    span.glyphicon.glyphicon-plus.menuIcon
+                    |Contribuer
+                  a
+                    span.glyphicon.glyphicon-search.menuIcon
+                    |Rechercher
+                  a
+                    span.glyphicon.glyphicon-calendar.menuIcon
+                    |Agenda
+                  a
+                    span.glyphicon.glyphicon-question-sign.menuIcon
+                    |F.A.Q.
+                   a
+                    span.glyphicon.glyphicon-user.menuIcon
+                    |Contact  
+            .container
+              .row
+                .col-sm-6
+                  .selection
+                    img(src='/boot/read.jpg', alt='Read')
+                    a.selection-text
+                      |Lire les articles approuvés par la communauté
+                .col-sm-6
+                  .selection
+                    img(src='/boot/work.jpg', alt='Validate')
+                    a.selection-text(href="/articles")
+                      |Consulter les articles en cours de validation

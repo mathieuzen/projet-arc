@@ -2885,6 +2885,27 @@ body.browser-update #browser-update .container li a {
   }
 }
 
+.selection {
+  padding: 20px;
+  margin: 20px;
+  border: 1px dashed #d3d3d3;
+}
+
+.selection img {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
+}
+
+.selection-text {
+  display: block !important;
+  text-align: center !important;
+  font-size: 20px !important;
+  padding: 10px !important;
+  border-top: 1px solid #d3d3d3 !important;
+}
+
 .comment-item {
   max-width: 580px;
   padding: 12px 10px 0px 10px;
