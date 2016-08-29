@@ -1,15 +1,25 @@
 .selection
+  display block
   padding 20px
   margin 20px
   border 1px dashed lightgray
+  transition all 0.5s
   img
     display block
     width 100%
     max-width 350px
     margin auto
+    transition all 0.5s
 .selection-text
-  display block !important
-  text-align center !important
-  font-size 20px !important
-  padding 10px !important
-  border-top 1px solid lightgray !important
+  display block
+  text-align center
+  font-size 20px
+  padding 10px
+  border-top 1px solid lightgray
+  height 80px
+.selection:hover
+  opacity 1
+  border 1px dashed black
+  color black
+  img
+    -webkit-filter brightness(80%) contrast(170%)
