@@ -1,110 +1,93 @@
 #home-content
     #home-body
         #wrapper
-            #sidebar-wrapper
-              ul.sidebar-nav
-                li.sidebar-brand(style="margin-top: 20px;")
-                  a(href="/admin/topics/create")
-                    span.glyphicon.glyphicon-plus.menuIcon
-                    |Contribuer
-                  a
-                    span.glyphicon.glyphicon-search.menuIcon
-                    |Rechercher
-                  a
-                    span.glyphicon.glyphicon-calendar.menuIcon
-                    |Agenda
-                  a
-                    span.glyphicon.glyphicon-question-sign.menuIcon
-                    |F.A.Q.
-                   a
-                    span.glyphicon.glyphicon-user.menuIcon
-                    |Contact                 
-            #sidebar-wrapper-right
-                .marketing
-                  // Three columns of text below the carousel
-                  .row
-                    .miniature.col-lg-12
-                      h2.smallTitle=t('home.arc.definition.title')
-                      .col-lg-12
-                        p(style='text-align: justify;')=t('home.arc.definition.content')
-                      .col-lg-12
-                        img.img-circle(src='/boot/speech.jpg', alt='Speech', style='width: 140px; height: 140px;')
-                        h3=t('home.arc.argumentation.title')
-                        p
-                          span=t('home.arc.argumentation.content')
-                      .col-lg-12
-                        img.img-circle(src='/boot/thinking.jpg', alt='Thinking', style='width: 140px; height: 140px;')
-                        h3=t('home.arc.reflexion.title')
-                        p
-                          span=t('home.arc.reflexion.content')
-                        p
-                      .col-lg-12
-                        img.img-circle(src='/boot/meeting1.jpg', alt='Meeting', style='width: 140px; height: 140px;')
-                        h3=t('home.arc.citoyennete.title')
-                        p
-                          span=t('home.arc.citoyennete.content')
-                        p
-                      .col-lg-12(style='margin-bottom:80px;')
-                        h3
-                          | Comment utiliser la plateforme ?
-                        #video
-                          | Emplacement de la video                    
-            #page-content-wrapper
-              .container
+          include ../left-menu/left-menu.jade
+          #sidebar-wrapper-right
+              .marketing
+                // Three columns of text below the carousel
                 .row
-                  .col-lg-12
-                    #banner(style='background-image: url(/boot/hands.jpg); background-size: auto 100%;')
-                .row
-                  .col-lg-12
-                    h2.featurette-heading(style='display: block; border-bottom: 0.5px dashed lightgray; padding: 15px;  margin-top: 10px; margin-bottom: 0; font-size:1.25em;') Dernières contributions
-                    each topic in topics
-                      .col-lg-12(style='border-bottom: 1px solid lightgrey;')
-                        - var options = {weekday: "long", year: "numeric", month: "long", day: "numeric"};
-                        h2(style="margin-bottom:8px; margin-top: 12px; color: #989898;")= topic.mediaTitle
-                        img.author-thumb(src="https://secure.gravatar.com/avatar/7191ae26dfe75d85eeedcc33464113de?d=mm")
-                        a= topic.author
-                        span(style="border-left: #d5dbde 1px solid; margin-left: 12px; padding-left: 12px;")= new Date(topic.updatedAt).toLocaleDateString("fr-FR",options)
-                        p.abstract(style="font-family: Calibri; font-size: 16px; background-color: transparent;margin-top:8px;") #{topic.content}
-                          a.read-more(href=topic.url style="display: inline; margin-left: 5px; font-size: 13px;") >>
-                .row
-                  .col-lg-12
-                    h2.featurette-heading(style='display: block; border-bottom: 0.5px dashed lightgray; padding: 15px;  margin-top: 10px; margin-bottom: 0; font-size:1.25em;') Thématiques
-                    .col-lg-12(style="margin-top: 10px;  padding-bottom: 10px;  border-bottom: 1px solid lightgrey;")
-                      each tag in tags
-                        span.chip= tag.name
-                .row.featurette.hidden-lg
-                  .miniature.col-md-12
+                  .miniature.col-lg-12
                     h2.smallTitle=t('home.arc.definition.title')
                     .col-lg-12
-                      p(style='font-size: 16px; text-align: justify;')
-                        span=t('home.arc.definition.content')
-                    .miniature.col-md-4
+                      p(style='text-align: justify;')=t('home.arc.definition.content')
+                    .col-lg-12
                       img.img-circle(src='/boot/speech.jpg', alt='Speech', style='width: 140px; height: 140px;')
-                      h2=t('home.arc.argumentation.title')
+                      h3=t('home.arc.argumentation.title')
                       p
                         span=t('home.arc.argumentation.content')
-                      p
-                    .miniature.col-md-4
+                    .col-lg-12
                       img.img-circle(src='/boot/thinking.jpg', alt='Thinking', style='width: 140px; height: 140px;')
-                      h2=t('home.arc.reflexion.title')
+                      h3=t('home.arc.reflexion.title')
                       p
                         span=t('home.arc.reflexion.content')
                       p
-                    .miniature.col-md-4
+                    .col-lg-12
                       img.img-circle(src='/boot/meeting1.jpg', alt='Meeting', style='width: 140px; height: 140px;')
-                      h2=t('home.arc.citoyennete.title')
+                      h3=t('home.arc.citoyennete.title')
                       p
                         span=t('home.arc.citoyennete.content')
                       p
-                    .row.hidden-lg
-                      .col-lg-12
-                        .col-lg-12.col-md-7
-                          h2.featurette-heading
-                            | Comment utiliser la plateforme ?
-                            span.text-muted  Guide video.
-                          p.lead
-                            | Guide d'utilisation de la plateforme ARC sous forme de video vous expliquant comment participer en rédigeant une argumentation ou en lisant des articles et en votant pour ou contre leur validation.
-                        .col-lg-12.col-md-5
-                          #video
-                            | Emplacement de la video
-                            
+                    .col-lg-12(style='margin-bottom:80px;')
+                      h3
+                        | Comment utiliser la plateforme ?
+                      #video
+                        | Emplacement de la video                    
+          #page-content-wrapper
+            .container
+              .row
+                .col-lg-12
+                  #banner(style='background-image: url(/boot/hands.jpg); background-size: auto 100%;')
+              .row
+                .col-lg-12
+                  h2.featurette-heading(style='display: block; border-bottom: 0.5px dashed lightgray; padding: 15px;  margin-top: 10px; margin-bottom: 0; font-size:1.25em;') Dernières contributions
+                  each topic in topics
+                    .col-lg-12(style='border-bottom: 1px solid lightgrey;')
+                      - var options = {weekday: "long", year: "numeric", month: "long", day: "numeric"};
+                      h2(style="margin-bottom:8px; margin-top: 12px; color: #989898;")= topic.mediaTitle
+                      img.author-thumb(src="https://secure.gravatar.com/avatar/7191ae26dfe75d85eeedcc33464113de?d=mm")
+                      a= topic.author
+                      span(style="border-left: #d5dbde 1px solid; margin-left: 12px; padding-left: 12px;")= new Date(topic.updatedAt).toLocaleDateString("fr-FR",options)
+                      p.abstract(style="font-family: Calibri; font-size: 16px; background-color: transparent;margin-top:8px;") #{topic.content}
+                        a.read-more(href=topic.url style="display: inline; margin-left: 5px; font-size: 13px;") >>
+              .row
+                .col-lg-12
+                  h2.featurette-heading(style='display: block; border-bottom: 0.5px dashed lightgray; padding: 15px;  margin-top: 10px; margin-bottom: 0; font-size:1.25em;') Thématiques
+                  .col-lg-12(style="margin-top: 10px;  padding-bottom: 10px;  border-bottom: 1px solid lightgrey;")
+                    each tag in tags
+                      span.chip= tag.name
+              .row.featurette.hidden-lg
+                .miniature.col-md-12
+                  h2.smallTitle=t('home.arc.definition.title')
+                  .col-lg-12
+                    p(style='font-size: 16px; text-align: justify;')
+                      span=t('home.arc.definition.content')
+                  .miniature.col-md-4
+                    img.img-circle(src='/boot/speech.jpg', alt='Speech', style='width: 140px; height: 140px;')
+                    h2=t('home.arc.argumentation.title')
+                    p
+                      span=t('home.arc.argumentation.content')
+                    p
+                  .miniature.col-md-4
+                    img.img-circle(src='/boot/thinking.jpg', alt='Thinking', style='width: 140px; height: 140px;')
+                    h2=t('home.arc.reflexion.title')
+                    p
+                      span=t('home.arc.reflexion.content')
+                    p
+                  .miniature.col-md-4
+                    img.img-circle(src='/boot/meeting1.jpg', alt='Meeting', style='width: 140px; height: 140px;')
+                    h2=t('home.arc.citoyennete.title')
+                    p
+                      span=t('home.arc.citoyennete.content')
+                    p
+                  .row.hidden-lg
+                    .col-lg-12
+                      .col-lg-12.col-md-7
+                        h2.featurette-heading
+                          | Comment utiliser la plateforme ?
+                          span.text-muted  Guide video.
+                        p.lead
+                          | Guide d'utilisation de la plateforme ARC sous forme de video vous expliquant comment participer en rédigeant une argumentation ou en lisant des articles et en votant pour ou contre leur validation.
+                      .col-lg-12.col-md-5
+                        #video
+                          | Emplacement de la video
+                          
